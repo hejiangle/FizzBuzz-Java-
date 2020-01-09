@@ -1,5 +1,7 @@
 package com.thoughtworks.models;
 
+import com.thoughtworks.utils.CodeChecker;
+
 public class Student {
 
     private int code;
@@ -10,17 +12,22 @@ public class Student {
 
     public String sayCode()
     {
-        if (code % 3 == 0)
+        if (CodeChecker.isMultipleOf3(code))
         {
+            if (CodeChecker.isMultipleOf5(code))
+            {
+                return "FizzBuzz";
+            }
+
             return "Fizz";
         }
 
-        if (code % 5 == 0)
+        if (CodeChecker.isMultipleOf5(code))
         {
             return "Buzz";
         }
 
-        if (code % 7 == 0)
+        if (CodeChecker.isMultipleOf7(code))
         {
             return "Whizz";
         }
