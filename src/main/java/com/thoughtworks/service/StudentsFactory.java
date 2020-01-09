@@ -16,7 +16,9 @@ public class StudentsFactory {
     public List<Student> create() {
         List<Student> students = new ArrayList<>(countOfStudents);
 
-        students.add(new Student(1));
+        for(int code = 1; code <= countOfStudents; code++) {
+            students.add(new Student(code));
+        }
 
         return students;
     }
