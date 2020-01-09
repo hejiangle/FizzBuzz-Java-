@@ -21,4 +21,9 @@ public class CodeChecker {
     {
         return String.valueOf(code).contains("3");
     }
+
+    public static boolean isContains5(int code)
+    {
+        return String.valueOf(code).contains("5");
+    }
 }

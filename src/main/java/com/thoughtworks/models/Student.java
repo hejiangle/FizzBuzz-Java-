@@ -12,40 +12,27 @@ public class Student {
 
     public String sayCode()
     {
-        if (CodeChecker.isContains3(code))
-        {
-            return "Fizz";
-        }
-
-        if (CodeChecker.isMultipleOf3(code))
-        {
-            if (CodeChecker.isMultipleOf5(code))
-            {
-                return "FizzBuzz";
+        String result = "";
+        if (!CodeChecker.isContains5(code)) {
+            if (CodeChecker.isContains3(code)) {
+                return result + "Fizz";
             }
 
-            if (CodeChecker.isMultipleOf7(code))
-            {
-                return "FizzWhizz";
+            if (CodeChecker.isMultipleOf3(code)) {
+                result += "Fizz";
             }
-
-            return "Fizz";
         }
 
         if (CodeChecker.isMultipleOf5(code))
         {
-            if (CodeChecker.isMultipleOf7(code))
-            {
-                return "BuzzWhizz";
-            }
-            return "Buzz";
+            result += "Buzz";
         }
 
         if (CodeChecker.isMultipleOf7(code))
         {
-            return "Whizz";
+            result += "Whizz";
         }
 
-        return String.valueOf(code);
+        return result.isEmpty() ? String.valueOf(code) : result;
     }
 }

@@ -79,10 +79,20 @@ public class StudentTest {
     @Test
     public void should_say_Fizz_when_their_code_contains_3()
     {
-        Student student = new Student(35);
+        Student student = new Student(63);
 
         String code = student.sayCode();
 
         assertEquals("Fizz", code);
+    }
+
+    @Test
+    public void should_not_say_Fizz_when_their_code_contains_5()
+    {
+        Student student = new Student(35);
+
+        String code = student.sayCode();
+
+        assertEquals("BuzzWhizz", code);
     }
 }
