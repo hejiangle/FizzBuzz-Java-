@@ -1,6 +1,7 @@
 package com.thoughtworks.models;
 
 import com.thoughtworks.utils.CodeChecker;
+import com.thoughtworks.utils.CodePlaceholder;
 
 public class Student {
 
@@ -12,27 +13,27 @@ public class Student {
 
     public String sayCode()
     {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         if (!CodeChecker.isContains5(code) || CodeChecker.isContains7(code)) {
             if (CodeChecker.isContains3(code)) {
-                return result + "Fizz";
+                return result.append(CodePlaceholder.Fizz.name()).toString();
             }
 
             if (CodeChecker.isMultipleOf3(code)) {
-                result += "Fizz";
+                result.append(CodePlaceholder.Fizz.name());
             }
         }
 
         if (CodeChecker.isMultipleOf5(code) && !CodeChecker.isContains7(code))
         {
-            result += "Buzz";
+            result.append(CodePlaceholder.Buzz.name());
         }
 
         if (CodeChecker.isMultipleOf7(code))
         {
-            result += "Whizz";
+            result.append(CodePlaceholder.Whizz.name());
         }
 
-        return result.isEmpty() ? String.valueOf(code) : result;
+        return result.toString().isEmpty() ? String.valueOf(code) : result.toString();
     }
 }
