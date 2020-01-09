@@ -20,6 +20,11 @@ public class Student {
             return "Buzz";
         }
 
+        if (code % 7 == 0)
+        {
+            return "Whizz";
+        }
+
         return String.valueOf(code);
     }
 }
