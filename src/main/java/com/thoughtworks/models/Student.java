@@ -10,9 +10,14 @@ public class Student {
 
     public String sayCode()
     {
-        if (code%3 == 0)
+        if (code % 3 == 0)
         {
             return "Fizz";
+        }
+
+        if (code % 5 == 0)
+        {
+            return "Buzz";
         }
 
         return String.valueOf(code);
