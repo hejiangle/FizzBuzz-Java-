@@ -19,6 +19,11 @@ public class Student {
                 return "FizzBuzz";
             }
 
+            if (CodeChecker.isMultipleOf7(code))
+            {
+                return "FizzWhizz";
+            }
+
             return "Fizz";
         }
 
