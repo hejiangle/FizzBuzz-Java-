@@ -16,4 +16,9 @@ public class CodeChecker {
     {
         return code % 7 == 0;
     }
+
+    public static boolean isContains3(int code)
+    {
+        return String.valueOf(code).contains("3");
+    }
 }

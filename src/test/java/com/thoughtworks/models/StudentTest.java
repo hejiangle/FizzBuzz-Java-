@@ -75,4 +75,14 @@ public class StudentTest {
 
         assertEquals("FizzWhizz", code);
     }
+
+    @Test
+    public void should_say_Fizz_when_their_code_contains_3()
+    {
+        Student student = new Student(35);
+
+        String code = student.sayCode();
+
+        assertEquals("Fizz", code);
+    }
 }

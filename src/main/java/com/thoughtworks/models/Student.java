@@ -12,6 +12,11 @@ public class Student {
 
     public String sayCode()
     {
+        if (CodeChecker.isContains3(code))
+        {
+            return "Fizz";
+        }
+
         if (CodeChecker.isMultipleOf3(code))
         {
             if (CodeChecker.isMultipleOf5(code))
