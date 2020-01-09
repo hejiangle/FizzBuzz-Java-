@@ -24,6 +24,10 @@ public class Student {
 
         if (CodeChecker.isMultipleOf5(code))
         {
+            if (CodeChecker.isMultipleOf7(code))
+            {
+                return "BuzzWhizz";
+            }
             return "Buzz";
         }
 

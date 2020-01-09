@@ -55,4 +55,14 @@ public class StudentTest {
 
         assertEquals("FizzBuzz", code);
     }
+
+    @Test
+    public void should_say_BuzzWhizz_when_their_code_is_a_multiple_of_5_and_7()
+    {
+        Student student = new Student(140);
+
+        String code = student.sayCode();
+
+        assertEquals("BuzzWhizz", code);
+    }
 }
