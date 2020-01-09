@@ -10,7 +10,8 @@ import static org.junit.Assert.assertEquals;
 public class StudentsFactoryTest {
 
     @Test
-    public void should_generate_students_when_given_the_one_student() {
+    public void should_generate_students_when_given_the_one_student()
+    {
         StudentsFactory factory = new StudentsFactory(1);
 
         List<Student> students = factory.create();
@@ -19,7 +20,8 @@ public class StudentsFactoryTest {
     }
 
     @Test
-    public void should_generate_students_when_given_the_multiple_students() {
+    public void should_generate_students_when_given_the_multiple_students()
+    {
         StudentsFactory factory = new StudentsFactory(120);
 
         List<Student> students = factory.create();

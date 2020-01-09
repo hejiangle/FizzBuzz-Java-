@@ -8,7 +8,13 @@ public class Student {
         this.code = code;
     }
 
-    public int sayCode() {
-        return code;
+    public String sayCode()
+    {
+        if (code%3 == 0)
+        {
+            return "Fizz";
+        }
+
+        return String.valueOf(code);
     }
 }

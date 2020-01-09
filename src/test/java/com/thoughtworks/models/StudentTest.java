@@ -7,11 +7,22 @@ import static org.junit.Assert.*;
 public class StudentTest {
 
     @Test
-    public void should_say_their_own_code(){
+    public void should_say_their_own_code()
+    {
         Student student = new Student(1);
 
-        int code = student.sayCode();
+        String code = student.sayCode();
 
-        assertEquals(1, code);
+        assertEquals("1", code);
+    }
+
+    @Test
+    public void should_say_Fizz_when_their_code_is_a_multiple_of_3()
+    {
+        Student student = new Student(9);
+
+        String code = student.sayCode();
+
+        assertEquals("Fizz", code);
     }
 }

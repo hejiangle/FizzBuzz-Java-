@@ -9,11 +9,13 @@ public class StudentsFactory {
 
     private int countOfStudents;
 
-    public StudentsFactory(int countOfStudents) {
+    public StudentsFactory(int countOfStudents)
+    {
         this.countOfStudents = countOfStudents;
     }
 
-    public List<Student> create() {
+    public List<Student> create()
+    {
         List<Student> students = new ArrayList<>(countOfStudents);
 
         for(int code = 1; code <= countOfStudents; code++) {
