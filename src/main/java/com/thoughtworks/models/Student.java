@@ -13,7 +13,7 @@ public class Student {
     public String sayCode()
     {
         String result = "";
-        if (!CodeChecker.isContains5(code)) {
+        if (!CodeChecker.isContains5(code) || CodeChecker.isContains7(code)) {
             if (CodeChecker.isContains3(code)) {
                 return result + "Fizz";
             }
@@ -23,7 +23,7 @@ public class Student {
             }
         }
 
-        if (CodeChecker.isMultipleOf5(code))
+        if (CodeChecker.isMultipleOf5(code) && !CodeChecker.isContains7(code))
         {
             result += "Buzz";
         }

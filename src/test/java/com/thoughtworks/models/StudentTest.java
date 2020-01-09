@@ -95,4 +95,14 @@ public class StudentTest {
 
         assertEquals("BuzzWhizz", code);
     }
+
+    @Test
+    public void should_not_say_Buzz_when_their_code_contains_7()
+    {
+        Student student = new Student(75);
+
+        String code = student.sayCode();
+
+        assertEquals("Fizz", code);
+    }
 }
